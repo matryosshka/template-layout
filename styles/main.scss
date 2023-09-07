@@ -1,0 +1,35 @@
+$containerWidth: 1280px; //нужный размер контейнера по макету
+$baseFontSize: 24px; //нужный основной размер шрифта
+
+//breakpoints
+$large-tablets: 1024px;
+$tablets: 768px;
+$phones: 480px;
+$small-phones: 320px;
+
+//z-indexes
+
+//colors
+$lavender: #c79fef85; //нужные основные цвета: определить через переменные
+
+//fonts
+
+//ℹ подключение сторонних шрифтов: пример
+/* @font-face {
+  font-family: 'monospace';
+  src: url('../fonts/monospacebold-webfont.woff2') format('woff2'),
+       url('../fonts/monospacebold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+*/
+
+// setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800&display=swap'); //нужный шрифт из общедоступных
+@import "./_layout.scss";
+@import "./_media.scss";
+
+//blocks
+@import "./blocks/_header.scss";
+@import "./blocks/_content.scss";
+@import "./blocks/_footer.scss";

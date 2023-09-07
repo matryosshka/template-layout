@@ -1,0 +1,95 @@
+html {
+  height: 100%; //чтобы сработала min-height у wrapper - должна быть явно задана высота родителей
+}
+
+body {
+  min-height: 100%; //чтобы элемент body занимал 100% высоты области просмотра: https://codepen.io/shadeed/pen/VwYMGZP/8e873b9a2b81f13b706cbcb0e4f3cbe9?editors=1100
+  margin: 0;
+  background: $lavender; //нужный
+  color: #FFFFFF; //нужный
+  font-family: 'Open Sans', Helvetica, sans-serif; //нужный
+  font-size: $baseFontSize; //нужный
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box; //все размеры элементов будут равны тем значениям, что заданы в свойствах width и height
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3s all;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+video {
+  object-fit: cover;
+  object-position: center;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-width: 1100px; //нужная ширина по макету
+  min-height: 100%; //обертка враппер - всегда должна по высоте занимать весь экран
+  display: flex;
+  flex-direction: column;
+}
+
+.maincontent {
+  flex: 1; //обертка содержимого maincontent - заберет все свободное место
+}
+
+/* еще один из способов прижать футер:
+.footer__container {
+  margin-top: auto; - отодвинуть футер к самому низу
+} */
+
+.container {
+  width: 95%;
+  max-width: $containerWidth;
+  height: 100%; //vh - взависимости от нужд
+  margin: 0 auto; //внешние отступы, для центрирования блока по горизонтали, относительно родителя - 0: верх, низ; auto - справа и слева
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
